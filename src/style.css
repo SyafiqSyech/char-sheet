@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Labrada", serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: #191919;
+  color: #f4f4f4;
+  @apply py-24 px-4;
+}
+
+::selection {
+  background-color: #4d4569;
+  color: #c6bce7;
+}
