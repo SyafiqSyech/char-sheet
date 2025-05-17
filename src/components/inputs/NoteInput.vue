@@ -125,7 +125,7 @@ button.ql-active .ql-fill {
 }
 
 .ql-editor.ql-blank::before {
-  color: #787878;
+  color: #616161;
   left: 0;
 }
 </style>

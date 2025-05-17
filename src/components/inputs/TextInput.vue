@@ -6,11 +6,12 @@
       v-model="content"
       @input="handleInput"
       ref="textInput"
-      class="input p-1 w-full"
+      :class="`input p-1 w-full h-full disabled:hover:!bg-transparent disabled:text-tertiary disabled:line-through ${textEnd ? 'text-end' : ''}`"
       rows="1"
       spellcheck="false"
       autocorrect="off"
       autocomplete="off"
+      :disabled="disable"
     ></input>
   </div>
 </template>
@@ -30,6 +31,14 @@ export default {
       type: Number,
       default: null
     },
+    disable: {
+      type: Boolean,
+      default: false
+    },
+    textEnd: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
@@ -45,5 +54,4 @@ export default {
 </script>
 
 <style>
-
 </style>

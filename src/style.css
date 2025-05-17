@@ -1,54 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #f4f4f4;
+  --color-primary-light: #f4f4f40d;
+  --color-secondary: #787878;
+  --color-tertiary: #616161;
+  --color-bg: #191919;
+  --color-bg-secondary: #202020;
+
+  --font-main: "Labrada", serif;
+}
+
 * {
-  font-family: "Labrada", serif;
-  font-size: 18px;
+  @apply font-main
 }
 
 body {
-  background-color: #191919;
-  color: #f4f4f4;
-  @apply py-24 px-4;
+  @apply py-24 px-4 text-primary bg-bg;
 }
 
 .input:hover {
-  background-color: #f4f4f40d;
+  @apply bg-primary-light;
 }
 
 .input:focus {
-  outline: 1px dashed #787878;
-  /* outline-offset: 3px; */
-  /* background-color: #f4f4f406; */
+  @apply outline-secondary outline-dashed;
 }
 
 .input::placeholder {
-  font-style: italic;
-  color: #787878;
+  @apply text-tertiary italic;
 }
 
 .input::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-  display: none;
+  @apply w-1 h-1 hidden;
 }
 
 .input:hover::-webkit-scrollbar, .input:focus::-webkit-scrollbar {
-  display: block;
+  @apply block
 }
 
 .input::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-transparent
 }
 
 .input::-webkit-scrollbar-thumb {
-  background: #3d3d3d;
+  @apply bg-[#3d3d3d];
 }
 
 .input::-webkit-scrollbar-thumb:hover {
-  background: #787878;
+  @apply bg-secondary;
 }
 
 ::selection {
-  background-color: #4d4569;
-  color: #c6bce7;
+  @apply bg-[#4d4569] text-[#c6bce7];
 }
