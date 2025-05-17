@@ -7,8 +7,8 @@
     </div>
     
     <div class="text-center">
-      <div class="!text-3xl font-semibold">{{ name }}</div>
-      <!-- <div class="!text-xl font-semibold">Blacksmith</div> -->
+      <div class="!text-3xl font-semibold capitalize">{{ name.toUpperCase() }}</div>
+      <div class="!text-xl font-semibold">{{ background?.toUpperCase() }}</div>
     </div>
   
   </div>
@@ -17,6 +17,7 @@
 <script setup lang="ts">
 interface Props {
   name: string;
+  background?: string;
   image: string;
 }
 

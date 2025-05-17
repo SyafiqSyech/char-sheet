@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-[minmax(auto,24rem)] lg:grid-cols-[repeat(2,24rem)] justify-center gap-8">
 
-    <Profile name="Bobby" :image="image" />
+    <Profile name="Bobby" background="Bonekeeper" :image="image" />
     
     <div class="flex flex-col gap-8">
 

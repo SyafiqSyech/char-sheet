@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-20 top-0 left-0 w-full h-full flex justify-center items-center bg-black/50 backdrop-blur-sm fixed"
+    class="z-20 top-0 left-0 w-full h-full flex justify-center items-center bg-black/20 backdrop-blur-xl fixed"
     @click.self="$emit('close')"
   >
   
@@ -132,7 +132,10 @@ function nextStep() {
   if (step.value < maxStep) {
     step.value++;
   } else {
-    // Submit form
+    // Handle form submission or finalization here
+    console.log('Character Created:', form.value);
+    // Close the character creation popup
+    // $emit('close');
   }
 }
 
