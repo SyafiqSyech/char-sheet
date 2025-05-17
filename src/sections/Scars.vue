@@ -1,10 +1,7 @@
 <template>
   <div>
 
-    <div class="mb-4 font-semibold flex gap-2">
-      <div class="!text-xl">🙦</div>
-      <div class="!text-xl">Scars</div>
-    </div>
+    <SectionTitle title="Scars" />
     
     <TextAreaInput placeholder="No scars..." />
     
@@ -13,4 +10,5 @@
 
 <script setup lang="ts">
 import TextAreaInput from '../components/inputs/TextAreaInput.vue';
+import SectionTitle from '../components/ui/SectionTitle.vue';
 </script>

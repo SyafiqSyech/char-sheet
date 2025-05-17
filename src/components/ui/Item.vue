@@ -1,7 +1,7 @@
 <template>
-  <div :class="`group w-full grid grid-cols-[1fr_1.5rem_1.5rem] odd:bg-bg-secondary ${fatigue ? '!bg-[#411e1e]' : ''}`">
+  <div :class="`group w-full grid grid-cols-[1fr_1.5rem_1.5rem] odd:bg-bg-secondary ${fatigue ? '!bg-[#332626] !text-[#ce7c7c]' : ''}`">
     
-    <TextInput placeholder="Empty" :disable="fatigue" />
+    <TextInput :placeholder="placeholder ?? 'Empty'" :disable="fatigue" />
     
     <template v-if="inventory">
     
@@ -21,14 +21,15 @@
 </template>
 
 <script setup lang="ts">
-import TextInput from '../components/inputs/TextInput.vue';
-import Checkbox from './inputs/Checkbox.vue';
+import TextInput from '../../components/inputs/TextInput.vue';
+import Checkbox from '../inputs/Checkbox.vue';
 
 interface Props {
   inventory?: boolean;
+  placeholder?: string;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>()
 
 import { ref } from 'vue';
 

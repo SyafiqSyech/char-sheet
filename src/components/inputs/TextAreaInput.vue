@@ -6,7 +6,7 @@
       @input="handleInput"
       ref="textAreaInput"
       class="input text-area-input p-1 w-full overflow-x-hidden"
-      rows="1"
+      :rows="initHeight"
       spellcheck="false"
       autocorrect="off"
       autocomplete="off"
@@ -28,6 +28,10 @@ export default {
     maxChars: {
       type: Number,
       default: null
+    },
+    initHeight: {
+      type: Number,
+      default: 1
     },
     maxHeight: {
       type: Boolean,

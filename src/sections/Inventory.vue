@@ -1,10 +1,7 @@
 <template>
   <div>
     
-    <div class="mb-4 font-semibold flex gap-2">
-      <div class="!text-xl">🙦</div>
-      <div class="!text-xl">Inventory</div>
-    </div>
+    <SectionTitle title="Inventory" />
 
     <div class="flex flex-col gap-4">
       
@@ -27,7 +24,7 @@
 
       <div class="border-2 border-bg-secondary rounded-lg py-2 px-3">
         <div class="italic pb-1">Petty</div>
-        <TextAreaInput placeholder="No petty items..." />
+        <TextAreaInput placeholder="e.g. Chalk, Ring, Dice, Pebble..." />
       </div>
 
       <!-- <div class="">
@@ -43,5 +40,6 @@
 
 <script setup lang="ts">
 import TextAreaInput from '../components/inputs/TextAreaInput.vue';
-import Item from '../components/Item.vue';
+import Item from '../components/ui/Item.vue';
+import SectionTitle from '../components/ui/SectionTitle.vue';
 </script>

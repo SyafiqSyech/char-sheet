@@ -1,9 +1,8 @@
 <template>
-  <div class="">
-    <div class="mb-4 font-semibold flex gap-2">
-      <div class="!text-xl">🙦</div>
-      <div class="!text-xl">Stats</div>
-    </div>
+  <div>
+
+    <SecitonTitle title="Stats" />
+
     <div class="grid grid-cols-2 items-start gap-2">
       <div class="grid grid-cols-[1fr_2fr] items-center">
         <div class="italic">STR</div>
@@ -22,14 +21,19 @@
         <textInput placeholder="0" initialText="4" />
         <div class="italic">Dpvd.</div>
         <div class="flex items-center p-1">
-          <Checkbox />
+          <Checkbox :modelValue="dpvd" @update:modelValue="dpvd = $event" />
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Checkbox from '../components/inputs/Checkbox.vue';
 import TextInput from '../components/inputs/TextInput.vue';
+import SecitonTitle from '../components/ui/SectionTitle.vue';
+
+const dpvd = ref(false);
 </script>
