@@ -5,15 +5,15 @@ export function useFontSize() {
   const applyFontSize = (size: string) => {
     const htmlElement = document.documentElement;
 
-    const currentSize = FONT_SIZE_OPTIONS.find(option => option.id === size);
+    const fontSizeOption = FONT_SIZE_OPTIONS.find(option => option.id === size);
 
-    if (!currentSize) {
+    if (!fontSizeOption) {
       console.warn(`Font size "${size}" is not recognized.`);
       return;
     }
 
     htmlElement.classList.remove(...FONT_SIZE_OPTIONS.map(option => option.value));
-    htmlElement.classList.add(currentSize.value);
+    htmlElement.classList.add(fontSizeOption.value);
   };
 
   const loadInitialFontSize = () => {

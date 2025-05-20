@@ -48,6 +48,6 @@ export interface Settings {
 export type SettingsKey = typeof AUTO_SAVE_KEY | typeof FONT_SIZE_KEY;
 
 export const DEFAULT_SETTINGS: Settings = {
-  [AUTO_SAVE_KEY]: true,
-  [FONT_SIZE_KEY]: FONT_SIZE_OPTIONS[1].value,
+  [AUTO_SAVE_KEY]: false,
+  [FONT_SIZE_KEY]: FONT_SIZE_OPTIONS[2].id,
 };

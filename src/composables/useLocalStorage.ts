@@ -1,6 +1,7 @@
 import { watch, onMounted, onUnmounted } from 'vue';
 import type { Ref } from 'vue';
 import { debounce } from '../utilities/debounce';
+import { DEFAULT_SETTINGS } from '../types/Settings';
 
 export function useLocalStorage<T>(
   key: string,
@@ -12,6 +13,8 @@ export function useLocalStorage<T>(
       if (settings) {
         const parsed = JSON.parse(settings);
         return parsed.autoSave !== false;
+      } else {
+        return DEFAULT_SETTINGS.autoSave;
       }
     } catch (error) {
       console.error('Failed to read app-settings from localStorage:', error);

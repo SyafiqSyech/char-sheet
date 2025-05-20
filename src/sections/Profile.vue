@@ -58,7 +58,6 @@ useLocalStorage('character-profile', profileData);
 
 const onSettingsSaved = (newSettings: Settings) => {
   Object.assign(settings.value, newSettings);
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings.value));
   // emit('settings', settings.value);
 };
 
