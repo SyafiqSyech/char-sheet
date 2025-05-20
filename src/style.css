@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #f4f4f4;
   --color-primary-light: #f4f4f40d;
-  --color-secondary: #787878;
+  --color-secondary: #888;
   --color-tertiary: #616161;
   --color-bg-primary: #191919;
   --color-bg-secondary: #202020;
@@ -24,7 +24,7 @@ body {
 }
 
 .input:focus {
-  @apply outline-secondary outline-dashed;
+  @apply outline-secondary outline-dashed outline-1;
 }
 
 .input::placeholder {
@@ -49,6 +49,14 @@ body {
 
 .input::-webkit-scrollbar-thumb:hover {
   @apply bg-secondary;
+}
+
+button:focus {
+  @apply outline-secondary outline-dashed outline-1;
+}
+
+button {
+  @apply outline-secondary cursor-pointer;
 }
 
 ::selection {

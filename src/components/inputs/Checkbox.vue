@@ -1,8 +1,8 @@
 <template>
-  <div @click="toggleCheckbox" class="cursor-pointer select-none">
+  <button @click="toggleCheckbox" class="select-none outline-offset-2 transition-all">
     <span v-if="modelValue">◆</span>
     <span v-else>◇</span>
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">

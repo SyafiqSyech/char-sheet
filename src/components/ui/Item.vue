@@ -6,9 +6,7 @@
     <template v-if="inventory">
     
       <div class="w-6 h-full flex justify-center items-center">
-        <div v-if="!fatigue" :class="`${hand ? '' : 'opacity-0'} group-hover:opacity-100 cursor-pointer transition-all`">
-            <Checkbox v-model="hand" />
-        </div>
+        <Checkbox v-model="hand" v-if="!fatigue" :class="`${hand ? '' : 'opacity-0'} group-hover:opacity-100 cursor-pointer focus:opacity-100`"/>
       </div>
       
       <div class="w-6 h-full flex justify-center items-center">

@@ -27,12 +27,12 @@
         <TextAreaInput placeholder="e.g. Chalk, Ring, Dice, Pebble..." />
       </div>
 
-      <!-- <div class="">
-        <div
-          class="text-[#787878] !text-sm py-1 px-3 text-center hover:bg-bg-secondary border-2 border-bg-secondary rounded-full cursor-pointer">
-          + Add Container
-        </div>
-      </div> -->
+      <div class="">
+        <button
+          class="text-secondary !text-sm py-1 px-3 text-center hover:bg-bg-secondary hover:underline border-2 border-bg-secondary rounded-full w-full">
+          add container.
+        </button>
+      </div>
 
     </div>
   </div>

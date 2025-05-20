@@ -1,31 +1,29 @@
 <template>
   <div>
-
     <SecitonTitle title="Stats" />
 
     <div class="grid grid-cols-2 items-start gap-2">
       <div class="grid grid-cols-[1fr_2fr] items-center">
         <div class="italic">STR</div>
-        <textInput placeholder="0 / 0" initialText="9 / 12" />
+          <TextInput placeholder="0 / 0" v-model="stats.str" />
         <div class="italic">DEX</div>
-        <textInput placeholder="0 / 0" initialText="8 / 8" />
+          <TextInput placeholder="0 / 0" v-model="stats.dex" />
         <div class="italic">WIL</div>
-        <textInput placeholder="0 / 0" initialText="10 / 11" />
+          <TextInput placeholder="0 / 0" v-model="stats.wil" />
         <div class="italic">HP</div>
-        <textInput placeholder="0 / 0" initialText="2 / 3" />
+          <TextInput placeholder="0 / 0" v-model="stats.hp" />
       </div>
       <div class="grid grid-cols-[1fr_2fr] items-center">
         <div class="italic">Armor</div>
-        <textInput placeholder="0" initialText="1" />
+          <TextInput placeholder="0" v-model="stats.armor" />
         <div class="italic">Gold</div>
-        <textInput placeholder="0" initialText="4" />
+          <TextInput placeholder="0" v-model="stats.gold" />
         <div class="italic">Dpvd.</div>
         <div class="flex items-center p-1">
-          <Checkbox :modelValue="dpvd" @update:modelValue="dpvd = $event" />
+          <Checkbox v-model="stats.dpvd" />
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -34,6 +32,19 @@ import { ref } from 'vue';
 import Checkbox from '../components/inputs/Checkbox.vue';
 import TextInput from '../components/inputs/TextInput.vue';
 import SecitonTitle from '../components/ui/SectionTitle.vue';
+import { useLocalStorage } from '../composables/useLocalStorage';
 
-const dpvd = ref(false);
+// Create a structured reactive object for all stats with no default values
+const stats = ref({
+  str: '',
+  dex: '',
+  wil: '',
+  hp: '',
+  armor: '',
+  gold: '',
+  dpvd: false
+});
+
+// Apply auto-save to the stats object
+useLocalStorage('character-stats', stats);
 </script>
